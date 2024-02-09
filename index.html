@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE_edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praggya Verma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/peoni.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Connect</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>ML Enthusiast</p>
+            <h1>Hi, I'm <span>Praggya Verma</span></h1>
+        </div>
+    </div>
+</div>
+<!-----------------------------about-------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/praggya.png" alt="image1">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>As an undergrad at IGDTUW, I am a huge tech enthusiast with huge interest in machine learning. I am keen learner of ML related things and currently learning new things. Feel free to connect with me!</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('clubs')">Clubs</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>ML-AI</span><br>Data Analysis</li>
+                        <li><span>Python</span><br>Data Analysis</li>
+                        <li><span>C++</span><br>Data Analysis</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="clubs">
+                    <ul>
+                        <li><span>GDSC IGDTUW</span><br>Event Core</li>
+                        <li><span>IEEE IGDTUW</span><br>Research Team</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------------portfolio----
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/peoni.png">
+
+            </div>
+            <div class="work">
+                <img src="images/peoni.png">
+                
+            </div>
+            <div class="work">
+                <img src="images/peoni.png">
+                
+            </div>
+        </div>
+    </div>
+</div>
+------>
+
+<div id="contact">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/praggyaverma." target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a></li>
+            <li><a href="https://github.com/praggyaverma" target="_blank"><img src="images/github.png" alt="GitHub"></a></li>
+            <li><a href="https://twitter.com/vpraggya" target="_blank"><img src="images/twitter.png" alt="Twitter"></a></li>
+            <li><a href="mailto:praggyaverma2005@example.com"><img src="images/email.png" alt="Email"></a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
